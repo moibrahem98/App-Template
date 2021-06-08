@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    height: inherit;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    outline: none !important;
+}
+
+:root {
+    --main-color: #7857fe;
+    --color-1: #e91e63;
+    --color-2: #f5ae10;
+    --color-3: #09d69c;
+    --dark-bg: #2b2c2f;
+    --main-to-dark-color: var(--main-color);
+    --dark-to-main-color: var(--dark-bg);
+    --shadow-black-100: 0 5px 15px rgb(0,0,0,0.1);
+    --shadow-black-300: 0 5px 15px rgb(0,0,0,0.3);
+    --black-900: #000;
+    --black-400: #555;
+    --black-100: #f7f7f7;
+    --black-200: #ececec;
+    --black-000: #fff;
+    --black-alpha: rgba(0,0,0,0.05)
+}
+
+body {
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif; 
+    font-size: 1rem;
+    font-weight: 400;
+    overflow-x: hidden;
+    background-color: #fff;
+    line-height: 1.5;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1440px;
+    width: 90%;
+    margin: 0 auto;
+    height: inherit;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+textarea , input {
+    margin: 0;
+    padding: 0;
+}
+.section-padding {
+    padding: 80px 0;
+}
+.section-title {
+    margin-bottom: 60px;
+    h2 {
+        font-size: 40px;
+        color: var(--black-900);
+        font-weight: 700;
+        text-transform: capitalize;
+        span {
+            color: var(--main-color);
+        }
+    }
+}
+.owl-dots {
+    padding: 0 15px;
+    text-align: center;
+    margin-top: 20px;
+}
+div.owl-dots > button:nth-child(2) {
+    background-color: #9999;
+}
+button.owl-dot{
+    height: 6px;
+    width: 24px;
+    background-color: #dddddddd;
+    display: inline-block;
+    margin: 0 4px;
+    border-radius: 5px;
+    &.active {
+        background-color: var(--main-color);
+    }
+}
