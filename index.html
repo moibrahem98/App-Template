@@ -2,7 +2,7 @@
 <html lang="zxx">
 
 <head>
-  <title>Shala - App Landing Page</title>
+  <title>App Landing Page</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- owl carousel css -->
@@ -20,33 +20,33 @@
   <nav class="navbar navbar-expand-md fixed-top" id="navbar">
     <div class="container">
       <!-- Brand -->
-      <a class="navbar-brand" href="index.html">Shaw App</a>
+      <a class="navbar-brand" href="index.html">Brand Name</a>
 
       <!-- Toggler/collapsibe Button -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon"></span>
+        <i class="fas fa-bars" style="color: #fff;"></i>
       </button>
 
       <!-- Navbar links -->
       <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link active" href="#">home</a>
+            <a class="nav-link active" href="#" data-scroll-nav="0">home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">features</a>
+            <a class="nav-link" href="#" data-scroll-nav="1">features</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">screenshots</a>
+            <a class="nav-link" href="#" data-scroll-nav="2">screenshots</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">testimonials</a>
+            <a class="nav-link" href="#" data-scroll-nav="3">testimonials</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">pricing</a>
+            <a class="nav-link" href="#" data-scroll-nav="4">pricing</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">contact</a>
+            <a class="nav-link" href="#" data-scroll-nav="6">contact</a>
           </li>
         </ul>
       </div>
@@ -54,7 +54,7 @@
   </nav>
   <!-- end navbar -->
   <!-- start home section -->
-  <section class="home d-flex align-items-center">
+  <section class="home d-flex align-items-center" data-scroll-index="0" id="home">
     <div class="effect-wrap">
       <i class="fas fa-plus effect effect-1"></i>
       <i class="fas fa-plus effect effect-2"></i>
@@ -68,7 +68,7 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates laboriosam amet consectetur ullam
               corporis cumque.</p>
             <div class="home-btn">
-              <a href="#" class="btn btn-1">Download App</a>
+              <a href="#" class="btn btn-1" data-scroll-goto="3">Download App</a>
               <button type="button" class="btn btn-1 video-play-btn" id='play-btn'>
                 <i class="fas fa-play"></i>
               </button>
@@ -85,21 +85,9 @@
     </div>
   </section>
   <!-- end home section -->
-  <!-- start popup video -->
-  <div class="video-popup" id="video-popup">
-    <div class="video-popup-inner">
-      <i class="fas fa-times video-popup-close"></i>
-      <div class="iframe-box">
-        <iframe id="player-1" src="https://www.youtube.com/embed/PkZNo7MFNFg" title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
-      </div>
-    </div>
-  </div>
-  <!-- end popup video -->
+
   <!-- start features section -->
-  <section class="features section-padding">
+  <section class="features section-padding" data-scroll-index="1" id="features">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8">
@@ -143,7 +131,7 @@
   </section>
   <!-- end features section-->
   <!-- start fun-fact section-->
-  <section class="fun-facts section-padding">
+  <section class="fun-facts section-padding" id="fun-facts">
     <div class="container">
       <div class="row">
         <div class="col-lg-6 col-md-5 d-flex align-items-center">
@@ -191,7 +179,7 @@
   </section>
   <!-- end fun-fact section-->
   <!-- start AppScreen section-->
-  <section class="app-screenshot section-padding">
+  <section class="app-screenshot section-padding" data-scroll-index="2" id="app-screenshot">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8">
@@ -223,7 +211,7 @@
   </section>
   <!-- end AppScreen section-->
   <!-- start Download section-->
-  <section class="app-download section-padding">
+  <section class="app-download section-padding" data-scroll-index="3" id="app-download">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8">
@@ -266,7 +254,7 @@
   </section>
   <!-- end Download section-->
   <!-- start How-it-works section-->
-  <section class="how-it-works section-padding">
+  <section class="how-it-works section-padding" data-scroll-index="5" id="how-it-works">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8">
@@ -309,7 +297,7 @@
   </section>
   <!-- end How-it-works section-->
   <!-- start testimonials section-->
-  <section class="testimonials section-padding">
+  <section class="testimonials section-padding" data-scroll-index="4" id="testimonials">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8">
@@ -390,7 +378,7 @@
   </section>
   <!-- end testimonials section-->
   <!-- start pricing section-->
-  <section class="pricing section-padding">
+  <section class="pricing section-padding" data-scroll-index="5" id="pricing">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8">
@@ -399,7 +387,7 @@
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row justify-content-center">
         <div class="col-lg-4 col-md-6">
           <div class="pricing-plan">
             <div class="pricing-header">
@@ -474,7 +462,7 @@
   </section>
   <!-- end pricing section-->
   <!-- start team section-->
-  <section class="team section-padding">
+  <section class="team section-padding" id="team">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8">
@@ -578,7 +566,7 @@
   </section>
   <!-- end faq section-->
   <!-- start contact section-->
-  <section class="contact section-padding">
+  <section class="contact section-padding" data-scroll-index="6" id="contact">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8">
@@ -690,11 +678,11 @@
           <div class="footer-col">
             <h3>Quick Links</h3>
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Features</a></li>
-              <li><a href="#">Screenshots</a></li>
-              <li><a href="#">Pricing</a></li>
-              <li><a href="#">Testimonial</a></li>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#features">Features</a></li>
+              <li><a href="#app-screenshot">Screenshots</a></li>
+              <li><a href="#pricing">Pricing</a></li>
+              <li><a href="#testimonials">Testimonial</a></li>
             </ul>
           </div>
         </div>
@@ -718,6 +706,30 @@
     </div>
   </section>
   <!-- end footer section-->
+  <!-- start popup video -->
+  <div class="video-popup" id="video-popup">
+    <div class="video-popup-inner">
+      <i class="fas fa-times video-popup-close" id="close-btn"></i>
+      <div class="iframe-box">
+        <iframe id="player-1" src="https://www.youtube.com/embed/PkZNo7MFNFg" title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+  <!-- end popup video -->
+  <!-- start toggle-darK video -->
+  <div class="toggle-theme">
+    <i class="fas fa-moon" id="dark-icon"></i>
+  </div>
+  <!-- end toggle-darK video -->
+  <!-- start preloader -->
+  <div class="preloader" id="preloader">
+    <span></span>
+  </div>
+  <!-- end preloader -->
+
 
   <!-- jquery js -->
   <script src="js/jquery.min.js"></script>

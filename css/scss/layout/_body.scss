@@ -198,7 +198,7 @@
     }
 
     .app-download-item {
-        background-color: #fff;
+        background-color: var(--black-000);
         border-radius: 10px;
         padding: 30px;
         text-align: center;
@@ -251,6 +251,9 @@
             left: 50%;
             top: 60px;
             z-index: -1;
+            @media (max-width: 991px) {
+                content: none;
+            }
         }
 
         .step {
@@ -557,4 +560,39 @@
 
 /*
 ----- end Faq section -----
+*/
+
+/*
+-----start responsive-----
+*/
+@media (max-width: 991px) {
+    .app-download-item , .how-it-works-item , .pricing-plan {
+        margin-bottom: 30px;
+    }
+    .how-it-works-item {
+        box-shadow: var(--shadow-black-100);
+        border-radius: 10px;
+    }
+    .footer-col {
+        margin-bottom: 30px;
+    }
+}
+@media (max-width: 767px) {
+    .fun-fact-img {
+        margin-bottom: 30px;
+        margin: auto;
+    }
+    .contact-form {
+        margin-top: 20px;
+    }
+    .fun-facts {
+        .section-title {
+            h2 {
+                text-align: center;
+            }
+        }
+    }
+}
+/*
+-----end responsive-----
 */

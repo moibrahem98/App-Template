@@ -68,28 +68,46 @@ $(document).ready(function () {
             }
         }
     })
+
+    $.scrollIt(
+        { topOffset: -50 }
+    );
 });
-// document.querySelector(document).ready(function(){
-//     const videoSrc = document.querySelector("#player-1").attr('src');
-//     document.querySelector(".video-play-btn", '.video-popup').addEventListener('click',function(){
-//         if(document.querySelector(".video-popup").classList.contains('video-popup-open')){
-//             document.querySelector('video-popup').removeClass('video-popup-open');
-//             document.querySelector('#player-1').attr('src','');
-//         }else {
-//             document.querySelector(".video-popup").classList.add('video-popup-open');
-//             if(document.querySelector('#player-1').attr('src')==''){
-//                 document.querySelector('#player-1').attr('src',videoSrc)
-//             }
-//         }
-//     });
-// });
 
-// let playBtn = document.getElementById('play-btn');
-// let pop = document.getElementById('video-popup');
+// customize the dark btn
+let darkIcon = document.getElementById('dark-icon');
 
-// document.onload =() => {
-//     playBtn.addEventListener('click',function(){
+function darkToggle() {
+    let element = document.body;
+    element.classList.toggle("dark");
+}
 
-//         alert('hello')
-//     });
-// } 
+darkIcon.onclick = darkToggle;
+
+// customize popup video
+let btn = document.getElementById('play-btn');
+let closeBtn = document.getElementById('close-btn');
+let popUp = document.getElementById('video-popup');
+
+// When the user clicks on the button, open the modal
+btn.onclick = function () {
+    popUp.style.display = "block";
+}
+// When the user clicks on <span> (x), close the modal
+closeBtn.onclick = function () {
+    popUp.style.display = "none";
+}
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function (event) {
+    if (event.target == popUp) {
+        popUp.style.display = "none";
+    }
+}
+
+// preloader settings
+
+let preloader = document.getElementById("preloader");
+
+window.addEventListener('load',function(){
+    preloader.style.display = "none"
+})

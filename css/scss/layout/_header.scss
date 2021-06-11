@@ -4,10 +4,11 @@
 .navbar {
     background-color: var(--main-color);
     padding: 15px 0;
-    box-shadow: 0 10px 10px rgba(0,0,0,.1);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .1);
     transition: all 0.5s ease;
-    > .container {
-    padding: 0 15px;
+
+    >.container {
+        padding: 0 15px;
     }
 
     .navbar-brand {
@@ -27,6 +28,7 @@
             font-weight: 400;
             color: #fff;
             position: relative;
+
             &::before {
                 content: "";
                 position: absolute;
@@ -38,9 +40,11 @@
                 transition: all .5s ease-in-out;
                 transform: scale(0);
             }
+
             &:hover::before {
                 transform: scale(1);
             }
+
             &.active::before {
                 transform: scale(1);
             }
@@ -48,6 +52,7 @@
     }
 
 }
+
 /*
 -----end-navbar-----
 */
@@ -55,20 +60,18 @@
 -----start-home-----
 */
 .home {
-    height: calc(100vh + 125px);
     padding: 150px 0;
     background-color: var(--main-to-dark-color);
     border-radius: 0 0 200px 0;
     position: relative;
     z-index: 1;
-    .home__row {
-        height: inherit;
-    }
+
     .effect-wrap {
         .effect {
             position: absolute;
             z-index: -1;
         }
+
         .effect-1 {
             left: 20%;
             top: 20%;
@@ -76,13 +79,15 @@
             color: var(--color-2);
             animation: spin_01 5s linear infinite;
         }
+
         .effect-2 {
             right: 5%;
             top: 10%;
             font-size: 25px;
-            color: rgba(255,255,255,.5);
+            color: rgba(255, 255, 255, .5);
             animation: spin_01 7s linear infinite;
         }
+
         .effect-3 {
             left: 5%;
             bottom: 30%;
@@ -91,6 +96,7 @@
             animation: bounceToTop_01 3s linear infinite;
         }
     }
+
     .home-text {
         h1 {
             font-size: 45px;
@@ -98,6 +104,7 @@
             font-weight: 700;
             margin: 0 0 20px;
         }
+
         p {
             font-size: 18px;
             line-height: 28px;
@@ -105,8 +112,10 @@
             margin: 0;
             font-weight: 300;
         }
+
         .home-btn {
             margin-top: 40px;
+
             .video-play-btn {
                 margin-left: 30px;
                 height: 50px;
@@ -114,9 +123,11 @@
                 padding: 0;
                 font-size: 16px;
                 animation: pulse_01 2s ease infinite;
+
                 i {
                     line-height: 50px;
                 }
+
                 &:hover {
                     animation: none;
                     box-shadow: var(--shadow-black-300);
@@ -127,16 +138,18 @@
 
     .home-img {
         position: relative;
+
         .circle {
             position: absolute;
             z-index: 1;
             height: 400px;
             width: 400px;
-            border: 1px solid rgba(255,255,255,.2);
+            border: 1px solid rgba(255, 255, 255, .2);
             border-radius: 50%;
             top: 50%;
             left: 50%;
-            transform: translate(-50%,-50%);
+            transform: translate(-50%, -50%);
+
             &::before {
                 content: "";
                 position: absolute;
@@ -144,12 +157,13 @@
                 width: 60px;
                 left: 30px;
                 top: 30px;
-                background-color: rgba(255,255,255,.4);
+                background-color: rgba(255, 255, 255, .4);
                 border-radius: 50%;
                 transform-origin: 170px 170px;
                 animation: spin_01 10s linear infinite;
             }
         }
+
         img {
             max-width: 250px;
             width: 100%;
@@ -159,6 +173,7 @@
         }
     }
 }
+
 /*
 -----end-home-----
 */
@@ -173,18 +188,22 @@
     width: 100%;
     height: 100%;
     z-index: 1999;
-    background-color: rgba(0,0,0,.7);
+    background-color: rgba(0, 0, 0, .7);
     display: flex;
     align-items: center;
     justify-content: center;
     padding-top: 30px;
-    opacity: 0;
-    visibility: hidden;
+    display: none;
     transition: all .5s ease;
+
     .video-popup-inner {
         width: 100%;
         max-width: 900px;
         position: relative;
+        margin: auto;
+        top: 50%;
+        transform: translateY(-50%);
+
         .video-popup-close {
             position: absolute;
             right: 0;
@@ -196,14 +215,17 @@
             color: #fff;
             cursor: pointer;
         }
+
         .video-popup-open {
             opacity: 1;
             visibility: visible;
         }
+
         .iframe-box {
             height: 0;
             overflow: hidden;
             padding-top: 56.25%;
+
             #player-1 {
                 width: 100%;
                 height: 100%;
@@ -216,9 +238,78 @@
     }
 }
 
-
-
-
 /*
 -----end-popup-video-----
+*/
+/*
+-----start-header-responsive-----
+*/
+
+@media (max-width: 991px) {
+    .navbar-toggler {
+        background-color: var(--main-to-dark-color);
+        box-shadow: var(--shadow-black-300);
+        height: 34px;
+        width: 34px;
+        padding: 0;
+        font-size: 17px;
+        color: #fff;
+    }
+
+    .navbar-nav {
+        background-color: var(--main-to-dark-color);
+        padding: 10px;
+    }
+
+    .nav-item {
+        margin: 0;
+        padding: 5px 15px;
+    }
+
+    .home-img {
+        .circle {
+            height: 320px;
+            width: 320px;
+        }
+    }
+
+    .home-text {
+        h1 {
+            font-size: 38px !important;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .home-text {
+        margin-bottom: 80px;
+    }
+
+    .section-title {
+        h2 {
+            font-size: 35px !important;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .home-text {
+        h1 {
+            font-size: 30px !important;
+        }
+
+        p {
+            font-size: 16px !important;
+        }
+    }
+
+    .section-title {
+        h2 {
+            font-size: 30px !important;
+        }
+    }
+}
+
+/*
+-----end-header responsive-----
 */
