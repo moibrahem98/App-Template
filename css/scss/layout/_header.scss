@@ -65,6 +65,7 @@
     border-radius: 0 0 200px 0;
     position: relative;
     z-index: 1;
+    overflow-x: hidden;
 
     .effect-wrap {
         .effect {
@@ -309,7 +310,13 @@
         }
     }
 }
-
+@media (max-width: 320px) {
+    #home > div.container > div > div.col-md-7 > div > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
 /*
 -----end-header responsive-----
 */

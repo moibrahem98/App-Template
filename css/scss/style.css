@@ -1496,6 +1496,7 @@ template {
   border-radius: 0 0 200px 0;
   position: relative;
   z-index: 1;
+  overflow-x: hidden;
 }
 
 .home .effect-wrap .effect {
@@ -1735,6 +1736,20 @@ template {
   }
   .section-title h2 {
     font-size: 30px !important;
+  }
+}
+
+@media (max-width: 320px) {
+  #home > div.container > div > div.col-md-7 > div > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
